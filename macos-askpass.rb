@@ -2,7 +2,7 @@ class MacosAskpass < Formula
   desc "🔐 Secure sudo authentication for macOS CI/CD and automation"
   homepage "https://github.com/scttfrdmn/macos-askpass"
   url "https://github.com/scttfrdmn/macos-askpass/archive/v1.0.0.tar.gz"
-  sha256 "548db940aebf088a80a2e62147d37954dc850677602e67870eada1c6586eeed3"
+  sha256 "565cb2542b491d0c0404acccc6c7c792792d6e45f297ef8eb6ab6f481c4f3c83"
   license "MIT"
   
   depends_on "bash"
