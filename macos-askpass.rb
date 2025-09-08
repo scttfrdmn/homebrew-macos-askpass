@@ -8,18 +8,20 @@ class MacosAskpass < Formula
   depends_on "bash"
   
   def install
+    # Install the main binary
     bin.install "bin/askpass"
     
     # Install documentation
-    doc.install Dir["docs/*"] if Dir.exist?("docs")
-    doc.install "README.md"
-    doc.install "PROJECT-SUMMARY.md"
+    if Dir.exist?("docs")
+      doc.install Dir["docs/*"]
+    end
+    doc.install "README.md" if File.exist?("README.md")
+    doc.install "PROJECT-SUMMARY.md" if File.exist?("PROJECT-SUMMARY.md")
     
     # Install examples
-    (share/"macos-askpass").install Dir["examples/*"] if Dir.exist?("examples")
-    
-    # Install man page equivalent (help text)
-    (share/"macos-askpass").install "bin/askpass" => "askpass-help"
+    if Dir.exist?("examples")
+      (share/"macos-askpass").install Dir["examples/*"]
+    end
   end
   
   def caveats
