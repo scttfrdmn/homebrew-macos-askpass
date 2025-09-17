@@ -1,8 +1,8 @@
 class MacosAskpass < Formula
   desc "🔐 Secure sudo authentication for macOS CI/CD and automation"
   homepage "https://github.com/scttfrdmn/macos-askpass"
-  url "https://github.com/scttfrdmn/macos-askpass/archive/v1.0.1.tar.gz"
-  sha256 "27225471ac8188280c91c391e60b3c3b1fc0bb1fa85826e141364510d3e323fa"
+  url "https://github.com/scttfrdmn/macos-askpass/archive/v1.0.2.tar.gz"
+  sha256 "795744fb59567f59a7716a4c438290161e56175b480715733c185383ca4efca9"
   license "MIT"
   
   depends_on "bash"
@@ -62,7 +62,7 @@ class MacosAskpass < Formula
   
   test do
     # Test version command
-    assert_match "macOS ASKPASS v1.0.0", shell_output("#{bin}/askpass version")
+    assert_match "macOS ASKPASS v1.0.2", shell_output("#{bin}/askpass version")
     
     # Test help command
     assert_match "ASKPASS", shell_output("#{bin}/askpass help")
